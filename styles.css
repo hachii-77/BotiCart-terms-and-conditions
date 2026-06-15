@@ -1,0 +1,52 @@
+:root{
+  --bg: #FDFEFF;
+  --primary-1: #89B8DD;
+  --primary-2: #92C6EF;
+  --accent: #527FA2;
+  --muted: #6b7f91;
+  --max-width: 1100px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#123; line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+.site-header{background:linear-gradient(90deg,#A8D0E8,#C0E5F8);color:#043246;padding:28px 0}
+.header-top{margin-bottom:0}
+.header-logo{max-width:200px;height:auto;display:block}
+.site-header h1{margin:-6px 0 0;font-size:24px;font-weight:600;color:#043246}
+.subtitle{margin:2px 0 0;color:var(--muted)}
+.actions{margin-top:10px}
+.btn{background:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;color:var(--accent);font-weight:600;box-shadow:0 2px 6px rgba(82,127,162,0.12)}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start;padding:20px 0}
+.toc{background:#fff;border-radius:10px;padding:12px;border:1px solid rgba(82,127,162,0.06);position:sticky;top:16px;align-self:start;max-height:none;overflow:visible}
+.toc h2{margin:0 0 8px;color:var(--accent);font-size:16px}
+.toc ol{list-style:none;padding-left:8px;margin:0}
+.toc ol li{margin:2px 0}
+.toc a{color:var(--accent);text-decoration:none;display:block;padding:4px 6px;border-radius:6px;font-size:14px}
+.toc a:hover{background:rgba(146,198,239,0.12)}
+.toc a:focus{outline:2px solid rgba(82,127,162,0.15);outline-offset:2px}
+.toc a.active{font-weight:700}
+.terms{background:#fff;padding:28px;border-radius:10px;border:1px solid rgba(82,127,162,0.06)}
+.terms h2{color:var(--accent);margin-top:0}
+.terms p{margin:0 0 12px}
+.terms ol.sub{list-style:none;padding-left:0;margin:6px 0 12px}
+.terms ol.sub li{margin:6px 0;padding-left:18px;color:inherit;font-weight:400}
+.terms p.subheading{color:inherit;font-weight:400;margin:0 0 12px;padding-left:0}
+.site-footer{padding:18px 0;color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;}
+  .toc{order:2}
+}
+
+/* Print styles */
+@media print{
+  body{background:#fff;color:#000}
+  .site-header,.site-footer,.toc,.btn{display:none}
+  .container{padding:0}
+  .terms{border:none;padding:0}
+}
+
+/* Small utilities */
+a{color:var(--accent)}
+h1,h2,h3{font-family:inherit}
